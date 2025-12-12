@@ -6,10 +6,10 @@ This is a redesigned mockup for the Valhallan.com website featuring a parent-foc
 
 ### New Navigation Structure
 The site now focuses on what parents are looking for:
-- **LEARN** - Explore the program with a free coaching session
-- **PLAY** - Join a team and meet weekly for training
-- **TRAIN** - Professional coaching that develops skills and character
-- **COMPETE** - Experience pro-level tournaments and leagues
+- **LEARN** - Education (including homeschool options)
+- **PLAY** - Social & play opportunities (events, parties, free play)
+- **TRAIN** - Coaching and rec training to build skills and discipline
+- **COMPETE** - Competitive team play with pathways to bigger events
 
 ### Design Elements
 - **Modern, clean design** using Valhallan brand guidelines
@@ -31,10 +31,10 @@ The site now focuses on what parents are looking for:
    - Pro-Level Experience
    - Community Building
 
-3. **Learn/Explore Section**
-   - Free coaching session offer
-   - Removes barriers to entry
-   - Shows the benefits without commitment
+3. **Learn (Education) Section**
+   - Homeschool-friendly educational offering
+   - Powered by USAEL curriculum from Mastery Coding
+   - Clear pathway from learning → playing → competing
 
 4. **Play Section**
    - Team-based approach
