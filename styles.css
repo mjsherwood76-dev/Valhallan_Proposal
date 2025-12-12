@@ -1,6 +1,6 @@
 /* ==========================================
    VALHALLAN WEBSITE MOCKUP - STYLESHEET
-   Brand Colors: Blue (#1E40AF), Gold (#F59E0B), White, Dark Gray
+   Brand Colors: Purple (#4f28f7), Pink (#f72585), Navy (#221a42), Cyan (#3cd1e5)
    ========================================== */
 
 /* CSS Reset & Base Styles */
@@ -103,6 +103,10 @@ body {
 
 .nav-link:hover {
     color: var(--primary-purple);
+}
+
+.nav-link.active {
+    color: var(--accent-cyan);
 }
 
 .nav-cta {
@@ -341,6 +345,64 @@ body {
 }
 
 /* ==========================================
+   OFFERINGS
+   ========================================== */
+.offerings {
+    background: var(--white);
+    padding: var(--section-padding);
+}
+
+.offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.offering-card {
+    display: block;
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.offering-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.offering-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.offering-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-purple);
+    margin-bottom: 0.5rem;
+}
+
+.offering-card p {
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
+
+.offering-link {
+    font-weight: 600;
+    color: var(--primary-navy);
+}
+
+.offering-card:hover .offering-link {
+    color: var(--accent-pink);
+}
+
+/* ==========================================
    CONTENT SECTIONS (Learn, Play, Train, Compete)
    ========================================== */
 .section-content {
@@ -382,10 +444,30 @@ body {
     margin: 2rem 0;
 }
 
+.benefits-list.compact {
+    margin: 1.25rem 0;
+}
+
 .benefits-list li {
     padding: 0.75rem 0;
     font-size: 1.05rem;
     color: var(--text-gray);
+}
+
+.fine-print {
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+}
+
+.inline-link {
+    color: var(--primary-purple);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.inline-link:hover {
+    color: var(--accent-pink);
+    text-decoration: underline;
 }
 
 .image-placeholder {
@@ -600,6 +682,177 @@ body {
 .how-it-works {
     background: var(--bg-light);
     padding: var(--section-padding);
+}
+
+/* ==========================================
+   ARENAS
+   ========================================== */
+.arenas-section {
+    background: var(--white);
+}
+
+.arena-card {
+    margin-top: 2rem;
+    background: var(--bg-light);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    border-left: 6px solid var(--accent-cyan);
+}
+
+.arena-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--primary-navy);
+    margin-bottom: 0.5rem;
+}
+
+.arena-card p {
+    color: var(--text-gray);
+    margin: 0;
+}
+
+/* ==========================================
+   LEAD FORM
+   ========================================== */
+.lead-section {
+    background: var(--bg-light);
+}
+
+.lead-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.lead-proof {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.lead-proof h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 0.5rem;
+}
+
+.mini-testimonials {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.mini-testimonial {
+    background: var(--bg-light);
+    border-radius: 10px;
+    padding: 1.25rem;
+    border-left: 4px solid var(--accent-pink);
+}
+
+.mini-testimonial p {
+    color: var(--text-gray);
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+}
+
+.mini-testimonial span {
+    font-weight: 600;
+    color: var(--primary-purple);
+}
+
+.lead-form-wrap {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.lead-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.lead-form label {
+    display: grid;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-navy);
+}
+
+.lead-form input,
+.lead-form select,
+.lead-form textarea {
+    width: 100%;
+    padding: 0.85rem;
+    border-radius: 10px;
+    border: 1px solid rgba(104, 104, 130, 0.35);
+    font-size: 1rem;
+    font-family: var(--font-body);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.lead-form input:focus,
+.lead-form select:focus,
+.lead-form textarea:focus {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 0 3px rgba(60, 209, 229, 0.2);
+}
+
+.form-fieldset {
+    border: 1px solid rgba(104, 104, 130, 0.25);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.form-fieldset legend {
+    padding: 0 0.5rem;
+    font-weight: 700;
+    color: var(--primary-navy);
+}
+
+.check {
+    display: flex !important;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 0.4rem 0;
+}
+
+.check input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.consent {
+    margin-top: 0.25rem;
+}
+
+.form-status {
+    margin-top: 0.75rem;
+    color: var(--text-gray);
+    min-height: 1.5rem;
+}
+
+.form-status.success {
+    color: var(--primary-purple);
+    font-weight: 700;
 }
 
 .steps-grid {
@@ -864,6 +1117,10 @@ body {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .lead-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -910,6 +1167,15 @@ body {
     }
     
     .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .arena-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-row {
         grid-template-columns: 1fr;
     }
     

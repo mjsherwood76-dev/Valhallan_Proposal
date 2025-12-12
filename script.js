@@ -42,8 +42,14 @@ if (newsletterForm) {
     newsletterForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const email = newsletterForm.querySelector('input[type="email"]').value;
-        alert(`Thank you for subscribing! We'll send updates to ${email}`);
+        const button = newsletterForm.querySelector('button[type="submit"]');
+        const originalText = button?.textContent;
+        if (button) button.textContent = 'Subscribed!';
         newsletterForm.reset();
+
+        window.setTimeout(() => {
+            if (button && originalText) button.textContent = originalText;
+        }, 2500);
     });
 }
 
@@ -87,7 +93,7 @@ const addScrollToTop = () => {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: var(--primary-blue);
+        background: var(--primary-purple);
         color: white;
         border: none;
         font-size: 24px;
@@ -114,6 +120,37 @@ const addScrollToTop = () => {
         });
     });
 };
+
+// Lead form submission (mock)
+const leadForm = document.getElementById('leadForm');
+const leadStatus = document.getElementById('leadStatus');
+
+if (leadForm && leadStatus) {
+    leadForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(leadForm);
+        const interests = formData.getAll('interest');
+
+        if (!interests || interests.length === 0) {
+            leadStatus.classList.remove('success');
+            leadStatus.textContent = 'Please select at least one interest so we can route you correctly.';
+            return;
+        }
+
+        // Mock success state (no backend in this prototype)
+        leadStatus.classList.add('success');
+        leadStatus.textContent = 'Thanks! We received your request. A team member will reach out shortly.';
+
+        // Log payload for prototype testing
+        const payload = Object.fromEntries(formData.entries());
+        payload.interest = interests;
+        // eslint-disable-next-line no-console
+        console.log('Lead form submission (mock):', payload);
+
+        leadForm.reset();
+    });
+}
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {

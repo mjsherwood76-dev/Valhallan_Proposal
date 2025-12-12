@@ -1,6 +1,6 @@
 # Valhallan Website Mockup
 
-This is a redesigned mockup for the Valhallan.com website featuring a parent-focused navigation structure and modern, sales-oriented content.
+This is a redesigned mockup for the Valhallan.com website featuring a parent-focused navigation structure and sales-oriented content.
 
 ## Features
 
@@ -12,10 +12,10 @@ The site now focuses on what parents are looking for:
 - **COMPETE** - Experience pro-level tournaments and leagues
 
 ### Design Elements
-- **Modern, clean design** with Valhallan's brand colors (Blue #1E40AF and Gold #F59E0B)
-- **Parent-focused messaging** that emphasizes character building and skill development
-- **Clear value propositions** inspired by XP League's successful approach
-- **Strong calls-to-action** throughout the page
+- **Modern, clean design** using Valhallan brand guidelines
+- **Parent-focused messaging** that emphasizes character building, safety, and skills
+- **Clear value propositions** inspired by the XP League approach
+- **Lead capture** with a “Learn more” form
 - **Mobile-responsive** design
 
 ### Key Sections
@@ -69,10 +69,16 @@ The site now focuses on what parents are looking for:
 
 ## Branding
 
-The design uses Valhallan's existing brand colors:
-- Primary Blue: #1E40AF
-- Accent Gold: #F59E0B
-- Typography: Rajdhani (display) and Inter (body)
+The design uses Valhallan's brand colors:
+- Purple: #4f28f7
+- Dark Purple: #3a0ca3
+- Navy: #221a42
+- Pink: #f72585
+- Cyan: #3cd1e5
+- Gray: #686882
+
+Typography:
+- Josefin Sans
 
 ## Messaging Approach
 
